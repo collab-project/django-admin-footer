@@ -73,6 +73,8 @@ And add the ``admin_footer`` tag to the ``footer`` block:
   {% admin_footer %}
   {% endblock %}
 
+You'll now see a copyright link at the bottom of the admin pages.
+The ``version`` information is hidden for non-staff users.
 
 .. _pip: https://pypi.python.org/pypi/pip
 .. _PyPi: https://pypi.python.org/pypi/django-admin-footer
