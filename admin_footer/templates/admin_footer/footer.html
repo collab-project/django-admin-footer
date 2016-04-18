@@ -1,0 +1,7 @@
+{% load i18n %}
+<div id="footer">
+    <hr/>
+    <div class="container pull-left">
+        <p class="text-muted credit">{% if version %}{{ version }}{% endif %}{% trans 'Copyright' %} {% if site_url %}<a href="{{ site_url }}" target="_blank">{{ site_name }}</a>{% endif %}{% if period %} &copy; {{ period }}{% endif %}</p>
+    </div>
+</div>
