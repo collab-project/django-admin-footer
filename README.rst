@@ -28,8 +28,7 @@ Or checkout the source code from Github_::
   cd django-admin-footer
   pip install -e .
 
-Add ``admin_footer`` to :py:data:`~django.settings.INSTALLED_APPS` in your Django
-settings.
+Add ``admin_footer`` to ``INSTALLED_APPS`` in your Django project settings:
 
 .. code-block:: python
 
