@@ -19,7 +19,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     version=version,
-    description='Templatetag to render footer in admin.',
+    description='Templatetag to render footer in Django admin.',
     long_description=README,
     classifiers=[
         'Development Status :: 5 - Production/Stable',
