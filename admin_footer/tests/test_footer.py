@@ -72,4 +72,3 @@ class FooterTagTests(TestCase):
         except base.TemplateSyntaxError as e:
             self.assertEqual(str(e),
                 'admin_footer tag does not accept any argument(s): foo')
-
