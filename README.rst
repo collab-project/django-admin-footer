@@ -28,10 +28,52 @@ Or checkout the source code from Github_::
   cd django-admin-footer
   pip install -e .
 
+Add ``admin_footer`` to :py:data:`~django.settings.INSTALLED_APPS` in your Django
+settings.
+
+.. code-block:: python
+
+  INSTALLED_APPS = (
+      ...
+
+      'admin_footer',
+  )
+
 Usage
 -----
 
-TODO
+The ``ADMIN_FOOTER_DATA`` settings dict provides the data used in your footer.
+The default template expects the following template vars: ``site_url``,
+``site_name``, ``period`` and ``version``.
+
+For example in ``settings.py``:
+
+.. code-block:: python
+
+  from datetime import datetime
+  from myapp import version
+
+  ADMIN_FOOTER_DATA = {
+    'site_url': 'https://www.google.com',
+    'site_name': 'Google',
+    'period': '{}'.format(datetime.now().year),
+    'version': 'v{} - '.format(version)
+  }
+
+Load the tag in your admin template (e.g. ``admin/base.html``):
+
+.. code-block:: python
+
+  {% load footer %}
+
+And add the ``admin_footer`` tag to the ``footer`` block:
+
+.. code-block:: python
+
+  {% block footer %}
+  {% admin_footer %}
+  {% endblock %}
+
 
 .. _pip: https://pypi.python.org/pypi/pip
 .. _PyPi: https://pypi.python.org/pypi/django-admin-footer
